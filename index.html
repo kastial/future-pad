@@ -3,21 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>to the me of tomorrow</title>
-        
+         
     </head>
+    <!--contains entire notepad-->
     <body>
         <div id="main">
-            <div id="title-box">
+            <div id="title">
                 <h1> ... ˏˋ°•*⁀➷  futurepad </h1>
             </div>
-            <div id="text">
-                <label>to:</label><input class="writing" id="to"type="text" placeholder="name (you or someone else?)"></input><br>
-                <input class="writing" id="about" type="text-box" placeholder="don't eat that cheeseburger."></input>
-                <label>............ when should this send?</label><input class="writing" id="date" type="date"></input>
-                <input class="writing" type="email" placeholder="fart@gmail.com"></input<br
+            
+            <!--where user puts name, note, & date to be sent-->
+            <form>
+            <div id="note-text">
+                <label>to:</label>
+                <input class="userinput" id="to"type="text" placeholder="name (you or someone else?)" required></input>
+                <br>
+                <textarea class="userinput" id="about" type="text-box" placeholder="don't eat that cheeseburger." required></textarea> <br>
+                <!--Add sticker choice later-->
+                <label> </label>when should this send? </label><input required class="userinput" id="date" type="date"></input><br><br>
+                <input class="userinput" type="email" placeholder="fart@gmail.com"></input<br
                 
             </div>
-            <button type="submit">send</button>
+            <input id="send-button" class="userinput" type="submit" value="send">
+            </form>
             <div id="bottom">
                 <h1> 🃜 🃚 🃖 🃁 🂭 🂺 ࣭</h1>
                 
@@ -53,21 +61,21 @@ h1 {
         
     }
     
-    #title-box {
+    #title {
         width: 500px;
         height: 100px;
         background-color: #878E88;
         border: double #725752 3px;
  
     }
-    .writing {
+    .userinput {
         background-color: #878E88;
+        border: double #725752 4px;
     }
     #to {
         padding: 5px;
         margin: 20px;
         background-color: #878E88;
-        border: double #725752 4px;
         color: #fef6c9;
     }
     #about {
@@ -76,11 +84,10 @@ h1 {
         width: 400px;
         height: 200px;
         background-color: #878E88;
-        border: double #725752 4px;
         color: #fef6c9;
         
     }
-     #text {
+     #note-text {
          width: 500px;
          height: 320px;
      }
@@ -99,6 +106,15 @@ h1 {
     }
     h1:hover {
         color: white;
+        transition: ease-in-out 2s;
+    }
+    .userinput:hover {
+        color: white;
+        transition: ease-in-out 2s;
+    }
+    #send-button:hover {
+        background-color; white;
+        transition: ease-in-out 1s;
     }
     
     
